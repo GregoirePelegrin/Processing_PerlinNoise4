@@ -23,13 +23,16 @@ class Line{
   }
   
   void display(){
-    stroke(0, 10);
+    // stroke(0, 10);
+    stroke(0);
     float currX = this.xStart;
     float currY = this.yStart;
     for(Point p : this.points){
-      line(currX, currY, p.x, p.y + p.value);
+      // line(currX, currY, p.x, p.y);
       // p.display();
+      line(currX, currY, p.x, p.y + p.value);
       currX = p.x;
+      // currY = p.y;
       currY = p.y + p.value;
     }
     line(currX, currY, this.xEnd, this.yEnd);
