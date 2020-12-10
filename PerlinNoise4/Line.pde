@@ -23,6 +23,7 @@ class Line{
   }
   
   void display(){
+    stroke(0, 10);
     float currX = this.xStart;
     float currY = this.yStart;
     for(Point p : this.points){
@@ -32,5 +33,11 @@ class Line{
       currY = p.y + p.value;
     }
     line(currX, currY, this.xEnd, this.yEnd);
+  }
+  
+  void update(){
+    for(Point p : this.points){
+      p.update();
+    }
   }
 }

@@ -1,4 +1,5 @@
 Line l;
+int time = 0;
 
 float coeffPerlin = 0.01;
 float coeffMultip = 100;
@@ -10,10 +11,10 @@ void setup(){
   background(255);
   
   l = new Line(50, height/2, width - 50, height/2);
-  
-  noLoop();
 }
 
 void draw(){
   l.display();
+  time += 1;
+  l.update();
 }
