@@ -4,7 +4,7 @@ int time = 0;
 float coeffPerlin = 0.01;
 float coeffMultip = 25;
 int nbrPoints = 100;
-int nbrLines = 5;
+int nbrLines = 50;
 
 void setup(){
   size(600, 600);
